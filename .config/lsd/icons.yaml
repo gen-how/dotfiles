@@ -1,0 +1,42 @@
+name:
+  desktop: 󰇄
+  downloads: 
+  documents: 󱓷
+  music: 󰝚
+  pictures: 
+  public: 
+  share: 
+  license: 
+  cmakelists.txt: 
+  known_hosts: 󱜥
+  src: 
+  lib: 
+  .trash: 
+  .vscode: 󰨞
+  .ssh: 
+extension:
+  go: 
+  rs: 
+  c: 
+  h: 
+  o: 
+  cpp: 
+  cc: 
+  cxx: 
+  hpp: 
+  cu: 
+  swift: 
+  cmake: 
+  pub: 󰌆
+  m4a: 
+  mp3: 
+  flac: 
+  wav: 
+filetype:
+  dir: 
+  file: 
+  executable: 
+  symlink-dir: 
+  symlink-file: 
+  device-char: 󰆧
+  device-block: 󰆦
