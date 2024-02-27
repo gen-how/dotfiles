@@ -84,22 +84,19 @@ source $ZDOTDIR/aliases
 
 sourcezsh() {
     source $ZDOTDIR/.zshrc
-    echo $ZDOTDIR/.zshrc sourced.
+    echo "sourcezsh(): $ZDOTDIR/.zshrc sourced"
 }
 
 editzsh() {
     vim $ZDOTDIR/.zshrc
     source $ZDOTDIR/.zshrc
-    echo $ZDOTDIR/.zshrc sourced.
+    echo "editzsh(): $ZDOTDIR/.zshrc sourced"
 }
 
 editzpro() {
     vim $ZDOTDIR/.zprofile
-    echo $ZDOTDIR/.zprofile edited, please restart zsh.
+    echo "editzpro(): $ZDOTDIR/.zprofile edited, please restart zsh"
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
-
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
