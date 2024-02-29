@@ -43,7 +43,7 @@ export PATH="$CARGO_HOME/bin:$PATH"
 
 # Set bat environment variables.
 export BAT_THEME="Catppuccin-mocha"
-export BAT_PAGER="less -SF"
+export BAT_PAGER="less -FRS"
 
 # Set fzf environment variables.
 # Oh-my-zsh's fzf plugin will do this:
