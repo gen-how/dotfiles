@@ -64,3 +64,6 @@ export FZF_DEFAULT_OPTS=" \
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR/npm"
+
+# Set node.js environment variables.
+export NODE_REPL_HISTORY="$XDG_CACHE_HOME/node_repl_history"
