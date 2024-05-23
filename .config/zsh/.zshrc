@@ -100,3 +100,6 @@ editzpro() {
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+# iTerm2 shell integration.
+[[ ! -f ~/.config/iterm2/shell_integration.zsh ]] || source ~/.config/iterm2/shell_integration.zsh
