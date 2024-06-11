@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/zsh/oh-my-zsh"
@@ -81,22 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 source $ZDOTDIR/aliases
-
-sourcezsh() {
-    source $ZDOTDIR/.zshrc
-    echo "sourcezsh(): $ZDOTDIR/.zshrc sourced"
-}
-
-editzsh() {
-    vim $ZDOTDIR/.zshrc
-    source $ZDOTDIR/.zshrc
-    echo "editzsh(): $ZDOTDIR/.zshrc sourced"
-}
-
-editzpro() {
-    vim $ZDOTDIR/.zprofile
-    echo "editzpro(): $ZDOTDIR/.zprofile edited, please restart zsh"
-}
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

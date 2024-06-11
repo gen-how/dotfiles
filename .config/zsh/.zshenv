@@ -8,6 +8,13 @@ export XDG_RUNTIME_DIR=/tmp
 export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 export XDG_CONFIG_DIRS=/etc/xdg
 
+# Set Homebrew PATH.
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
 
 # Set completion files path.
 FPATH="$ZDOTDIR/completion:${FPATH}"
@@ -20,11 +27,6 @@ export _ZO_DATA_DIR="$XDG_DATA_HOME"
 
 # Set "less" command history filepath.
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
-
-
-# Set Homebrew PATH.
-eval "$(/opt/homebrew/bin/brew shellenv)"
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 
 # Set Python startup filepath.
