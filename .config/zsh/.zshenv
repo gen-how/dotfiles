@@ -33,6 +33,8 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/python_startup.py"
 export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
 
+# Set tensorflow.keras cache dir.
+export KERAS_HOME="$XDG_CACHE_HOME/keras"
 
 # Set Go environment variables.
 export GOENV="$HOME/go/env"
