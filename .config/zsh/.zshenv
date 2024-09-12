@@ -39,6 +39,7 @@ export KERAS_HOME="$XDG_CACHE_HOME/keras"
 # Set Go environment variables.
 export GOENV="$HOME/go/env"
 export GOCACHE="$XDG_CACHE_HOME/go"
+export PATH="$HOME/go/bin:$PATH"
 
 
 # Set Rust environment variables.
