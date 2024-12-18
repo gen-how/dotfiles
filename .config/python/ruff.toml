@@ -1,0 +1,4 @@
+[lint]
+ignore = [
+    "E402", # Allow module level import not at top of file for lazy loading
+]
