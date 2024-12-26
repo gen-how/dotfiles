@@ -7,6 +7,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_RUNTIME_DIR=/tmp
 export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 export XDG_CONFIG_DIRS=/etc/xdg
+export PATH="$XDG_BIN_HOME:$PATH"
 
 # Set Homebrew PATH.
 export HOMEBREW_PREFIX="/opt/homebrew";
