@@ -1,0 +1,11 @@
+theme = "catppuccin-mocha"
+font-family = "Monaco Nerd Font"
+font-size = 18
+bold-is-bright = true
+background-opacity = 0.9
+background-blur-radius = 20
+cursor-style = bar
+window-padding-x = 10
+window-padding-balance = true
+window-height = 25
+window-width = 100
