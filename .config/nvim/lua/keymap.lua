@@ -20,6 +20,16 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
+-- Move lines up or down
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>==')
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==')
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('n', '<A-up>', ':m .-2<CR>==')
+vim.keymap.set('v', '<A-up>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('n', '<A-down>', ':m .+1<CR>==')
+vim.keymap.set('v', '<A-down>', ":m '>+1<CR>gv=gv")
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
