@@ -6,9 +6,9 @@ vim.g.maplocalleader = " "
 
 -- Load settings
 require("basic")
+require("config.lazy")
 require("keymap")
 require("autocmd")
-require("config.lazy")
 
 if vim.g.vscode then
     -- Load additional settings specific to VSCode.
