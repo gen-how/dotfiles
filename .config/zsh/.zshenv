@@ -36,8 +36,7 @@ export _ZO_DATA_DIR="$XDG_DATA_HOME"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export LESSCHARSET=UTF-8
 
-# Set Python startup filepath.
-export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/python_startup.py"
+# Set Pip cache directory.
 export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
 
 # Set tensorflow.keras cache dir.
