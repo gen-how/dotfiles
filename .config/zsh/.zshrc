@@ -66,8 +66,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   fzf
   zoxide
-  zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -105,3 +103,9 @@ _uv_run_mod() {
     fi
 }
 compdef _uv_run_mod uv
+
+# Setup zsh-autosuggestions.
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Setup zsh-syntax-highlighting. The script must be sourced at the end of the .zshrc file.
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
