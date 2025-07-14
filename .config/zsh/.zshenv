@@ -24,8 +24,7 @@ FPATH="$ZDOTDIR/completion:${FPATH}"
 export LANG=zh_TW.UTF-8
 
 # Set MANPAGER to use Neovim.
-export MANPAGER="nvim +Man!"
-
+# export MANPAGER="nvim +Man!"
 
 # Set Z jump around environment variables.
 export _Z_DATA="$XDG_CACHE_HOME/z"
