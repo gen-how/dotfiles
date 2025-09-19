@@ -1,11 +1,16 @@
-theme = "catppuccin-mocha"
-font-family = "Monaco Nerd Font"
+font-family = "Maple Mono Normal NF CN"
+font-feature = liga
 font-size = 18
-bold-is-bright = true
-background-opacity = 0.9
-background-blur-radius = 20
+
+theme = "Catppuccin Frappe"
+
+background = #051419
+background-opacity = 0.8
+background-blur = 10
+
 cursor-style = bar
-window-padding-x = 10
-window-padding-balance = true
+cursor-style-blink = true
+
+window-width = 120
 window-height = 25
-window-width = 100
+window-padding-x = 10,0
