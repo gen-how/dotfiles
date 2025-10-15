@@ -1,5 +1,5 @@
 font-family = "Maple Mono Normal NF CN"
-font-feature = liga
+font-feature = liga, cv99
 font-size = 18
 
 theme = "Catppuccin Frappe"
