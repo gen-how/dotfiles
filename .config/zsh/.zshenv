@@ -53,7 +53,7 @@ export CARGO_HOME="$HOME/rust/cargo"
 export PATH="$CARGO_HOME/bin:$PATH"
 
 # Set bat environment variables.
-export BAT_THEME="Catppuccin-mocha"
+export BAT_THEME="Catppuccin Frappe"
 export BAT_PAGER="less -FRS"
 
 # Set fzf environment variables.
