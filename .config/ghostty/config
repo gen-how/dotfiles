@@ -13,4 +13,4 @@ cursor-style-blink = true
 
 window-width = 120
 window-height = 25
-window-padding-x = 10,0
+window-padding-x = 8
