@@ -62,12 +62,22 @@ export BAT_PAGER="less -FRS"
 export FZF_DEFAULT_OPTS=" \
 --info=inline-right \
 --prompt=' ' \
---pointer='' \
 --border=sharp \
 --preview-window='border-left' \
---color=gutter:-1,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=bg+:#414559 \
+--color=fg:#C6D0F5 \
+--color=fg+:#C6D0F5 \
+--color=hl:#E78284 \
+--color=hl+:#E78284 \
+--color=info:#CA9EE6 \
+--color=label:#C6D0F5 \
+--color=border:#737994 \
+--color=header:#E78284 \
+--color=marker:#BABBF1 \
+--color=prompt:#CA9EE6 \
+--color=pointer:#F2D5CF \
+--color=spinner:#F2D5CF \
+--color=selected-bg:#51576D \
 "
 
 # Set npm environment variables.
