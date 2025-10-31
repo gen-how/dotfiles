@@ -1,6 +1,6 @@
 font-family = "Maple Mono"
 font-family = "Maple Mono NF CN"
-font-feature = liga, cv01, cv02, cv04, cv99, ss02
+font-feature = liga, cv01, cv02, cv04, cv99, ss01, ss02
 font-size = 18
 
 theme = "Catppuccin Frappe"
