@@ -102,6 +102,9 @@ _uv_run_mod() {
 }
 compdef _uv_run_mod uv
 
+# Enable shell integration in VSCode integrated terminal.
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 # Setup zsh-autosuggestions.
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
