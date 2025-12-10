@@ -1,6 +1,7 @@
 # Custom aliases.
 alias cat="bat -S"
 alias cht="cht.sh"
+alias echopath="echo $PATH | tr ':' '\n'"
 alias find="fd"
 alias fzfp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias grep="rg"
