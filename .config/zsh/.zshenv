@@ -23,13 +23,9 @@ FPATH="$ZDOTDIR/completion:${FPATH}"
 # Set Language if possible.
 export LANG=zh_TW.UTF-8
 
-# Set MANPAGER to use Neovim.
-# export MANPAGER="nvim +Man!"
-
 # Set Z jump around environment variables.
 export _Z_DATA="$XDG_CACHE_HOME/z"
 export _ZO_DATA_DIR="$XDG_DATA_HOME"
-
 
 # Set "less" command history filepath and character set.
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
@@ -41,11 +37,18 @@ export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
 # Set tensorflow.keras cache dir.
 export KERAS_HOME="$XDG_CACHE_HOME/keras"
 
+# Set npm environment variables.
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
+
+# Set node.js environment variables.
+export NODE_REPL_HISTORY="$XDG_CACHE_HOME/node_repl_history"
+
 # Set Go environment variables.
 export GOENV="$HOME/go/env"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 export PATH="$HOME/go/bin:$PATH"
-
 
 # Set Rust environment variables.
 export RUSTUP_HOME="$HOME/rust/rustup"
@@ -79,11 +82,3 @@ export FZF_DEFAULT_OPTS=" \
 --color=spinner:#F2D5CF \
 --color=selected-bg:#51576D \
 "
-
-# Set npm environment variables.
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
-export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
-
-# Set node.js environment variables.
-export NODE_REPL_HISTORY="$XDG_CACHE_HOME/node_repl_history"
