@@ -1,0 +1,16 @@
+RST=$(tput sgr0)
+B=$(tput bold)
+GN=$(tput setaf 2)
+CY=$(tput setaf 6)
+
+brew update && output=$(brew outdated --verbose)
+if [[ -z "$output" ]]; then
+    echo "No outdated packages."
+else
+    echo "$output"
+    prompt="${GN}<==${RST}${B} Execute '${CY}brew upgrade${RST}${B}' to upgrade all packages?${RST} [y/N] "
+    read -p "$prompt" choice
+    if [[ "$choice" =~ ^[Yy] ]]; then
+        brew upgrade
+    fi
+fi
