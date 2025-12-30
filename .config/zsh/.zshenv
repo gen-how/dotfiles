@@ -45,6 +45,9 @@ export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
 # Set node.js environment variables.
 export NODE_REPL_HISTORY="$XDG_CACHE_HOME/node_repl_history"
 
+# Set Bun environment variables.
+export PATH="$XDG_CACHE_HOME/.bun/bin:$PATH"
+
 # Set Go environment variables.
 export GOENV="$HOME/go/env"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
