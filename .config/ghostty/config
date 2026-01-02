@@ -17,3 +17,5 @@ window-height = 25
 window-padding-x = 8
 
 macos-titlebar-style = hidden
+
+keybind = shift+enter=text:\x1b\r
