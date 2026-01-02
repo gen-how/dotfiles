@@ -15,3 +15,5 @@ cursor-style-blink = true
 window-width = 120
 window-height = 25
 window-padding-x = 8
+
+macos-titlebar-style = hidden
