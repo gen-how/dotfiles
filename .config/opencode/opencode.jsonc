@@ -9,6 +9,29 @@
       //   "CONTEXT7_API_KEY": "YOUR_API_KEY"
       // },
       "enabled": true
-    }
+    },
+  },
+  "permission": {
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "edit": {
+      "*.env": "deny",
+      "*.env.*": "deny",
+    },
+    "bash": {
+      "*": "ask",
+      "rm *": "deny",
+      "trash *": "deny",
+      "grep *": "allow",
+      "find *": "allow",
+      "rg *": "allow",
+      "fd *": "allow",
+      "git status *": "allow",
+      "git commit -e *": "allow",
+    },
   }
 }
