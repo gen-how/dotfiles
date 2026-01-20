@@ -1,0 +1,25 @@
+DIFF=$(git --no-pager diff --cached)
+
+if [ -z "$DIFF" ]; then
+    echo "No staged changes to commit."
+    exit 0
+fi
+
+LOGS=$(git --no-pager log --oneline -n 10)
+
+EXTRA_INSTRUCTIONS="$*"
+
+PROMPT="\
+Current staged changes:
+$DIFF
+
+Recent commit history:
+$LOGS
+
+User suggest:
+${EXTRA_INSTRUCTIONS:-"None"}
+
+Based on the context above, write commit message for a single git commit.
+"
+
+echo "$PROMPT" | claude -p --agent git-commit-msg-writer | git commit -e -F -
