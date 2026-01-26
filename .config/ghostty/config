@@ -3,16 +3,18 @@ font-family = "Maple Mono NF CN"
 font-feature = -calt, cv01, cv61, cv99
 font-size = 20
 
-theme = "Catppuccin Frappe"
+theme = "Catppuccin Mocha"
 # background = #051419
-# background-opacity = 0.8
-# background-blur = 10
+background-opacity = 0.8
+background-blur = 10
+split-divider-color = #A6ADC8
+unfocused-split-opacity = 0.6
 
 cursor-style = bar
 cursor-style-blink = true
 
 window-width = 120
-window-height = 25
+window-height = 30
 window-padding-x = 8,8
 window-padding-y = 8,8
 window-padding-balance = false
