@@ -24,5 +24,5 @@ rsync -auv ${dotfiles_dir}/.config/ ${XDG_CONFIG_HOME}\
 info "Deploying dotfiles to \"${XDG_BIN_HOME}\""
 rsync -auv ${dotfiles_dir}/.local/bin/ ${XDG_BIN_HOME}\
 
-info "Deploying dotfiles to \"${HOME}/.claude\""
-rsync -auv ${dotfiles_dir}/.claude/ ${HOME}/.claude/\
+info "Deploying dotfiles to \"${HOME}/.codex\""
+rsync -auv ${dotfiles_dir}/.codex/ ${HOME}/.codex/\
