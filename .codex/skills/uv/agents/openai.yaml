@@ -1,0 +1,5 @@
+interface:
+  display_name: "uv"
+  short_description: "Manage Python dependencies, scripts, tools, and runtimes using uv."
+  icon_small: "./assets/uv-small.svg"
+  icon_large: "./assets/uv.png"
