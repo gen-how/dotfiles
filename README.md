@@ -1,10 +1,16 @@
+**English** | [繁體中文](README.zh-TW.md)
+
 # Dotfiles
-Some dotfiles
 
-# How to use
+Configuration files for several tools.
 
-Clone this repository and execute:
+## Usage
+
+Clone this repository and run:
 
 ```shell
 dotfiles/deploy.sh
 ```
+
+> [!CAUTION]
+> This script will overwrite existing configuration files. Please back up any important files first.
