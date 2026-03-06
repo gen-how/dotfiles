@@ -16,13 +16,12 @@ info() { echo "${BL}==> ${RST}${B}$1${RST}"; }
 # Gets the directory of the script.
 dotfiles_dir=$(dirname $0)
 
-# Use the rsync command to copy the dotfiles to the XDG_CONFIG_HOME directory.
+# Uses the rsync command to copy the dotfiles to the XDG_CONFIG_HOME directory.
 info "Deploying dotfiles to \"${XDG_CONFIG_HOME}\""
-rsync -auv ${dotfiles_dir}/.config/ ${XDG_CONFIG_HOME}\
-    --exclude "nvim"\
+rsync -auv ${dotfiles_dir}/.config/ ${XDG_CONFIG_HOME}
 
 info "Deploying dotfiles to \"${XDG_BIN_HOME}\""
-rsync -auv ${dotfiles_dir}/.local/bin/ ${XDG_BIN_HOME}\
+rsync -auv ${dotfiles_dir}/.local/bin/ ${XDG_BIN_HOME}
 
 info "Deploying dotfiles to \"${HOME}/.codex\""
-rsync -auv ${dotfiles_dir}/.codex/ ${HOME}/.codex/\
+rsync -auv ${dotfiles_dir}/.codex/ ${HOME}/.codex/
