@@ -9,7 +9,15 @@
 複製此儲存庫並在終端機中執行：
 
 ```shell
-dotfiles/deploy.sh
+dotfiles/deploy.sh .config
+```
+
+```shell
+dotfiles/deploy.sh .local/bin
+```
+
+```shell
+dotfiles/deploy.sh .codex
 ```
 
 > [!CAUTION]

@@ -9,7 +9,15 @@ Configuration files for several tools.
 Clone this repository and run:
 
 ```shell
-dotfiles/deploy.sh
+dotfiles/deploy.sh .config
+```
+
+```shell
+dotfiles/deploy.sh .local/bin
+```
+
+```shell
+dotfiles/deploy.sh .codex
 ```
 
 > [!CAUTION]
