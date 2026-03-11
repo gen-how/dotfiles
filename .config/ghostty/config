@@ -3,9 +3,8 @@ font-family = "Maple Mono NF CN"
 font-feature = -calt, cv01, cv61, cv99
 font-size = 20
 
-theme = "Catppuccin Mocha"
-# background = #051419
-background-opacity = 0.8
+theme = "Catppuccin Frappe"
+background-opacity = 1.0
 background-blur = 10
 split-divider-color = #A6ADC8
 unfocused-split-opacity = 0.6
