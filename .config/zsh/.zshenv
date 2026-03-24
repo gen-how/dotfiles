@@ -58,11 +58,11 @@ export RUSTUP_HOME="$HOME/rust/rustup"
 export CARGO_HOME="$HOME/rust/cargo"
 export PATH="$CARGO_HOME/bin:$PATH"
 
-# Set bat environment variables.
+# Set "bat" command environment variables.
 export BAT_THEME="Catppuccin Frappe"
 export BAT_PAGER="less -FRS"
 
-# Set fzf environment variables.
+# Set "fzf" command environment variables.
 # Oh-my-zsh's fzf plugin will do this:
 # export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git"
 export FZF_DEFAULT_OPTS=" \
@@ -85,3 +85,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=spinner:#F2D5CF \
 --color=selected-bg:#51576D \
 "
+
+# Set "albumentationsx" Python library environment variables to disable telemetry features.
+export ALBUMENTATIONS_NO_TELEMETRY=1
+export ALBUMENTATIONS_OFFLINE=1
