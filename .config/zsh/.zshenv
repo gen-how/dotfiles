@@ -63,11 +63,10 @@ export BAT_THEME="Catppuccin Frappe"
 export BAT_PAGER="less -FRS"
 
 # Set "fzf" command environment variables.
-# Oh-my-zsh's fzf plugin will do this:
-# export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git"
 export FZF_DEFAULT_OPTS=" \
 --info=inline-right \
---prompt=' ' \
+--prompt='  ' \
 --border=sharp \
 --preview-window='border-left' \
 --color=bg+:#414559 \
