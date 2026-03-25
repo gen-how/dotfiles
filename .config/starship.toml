@@ -36,7 +36,6 @@ $erlang\
 $fennel\
 $fortran\
 $gleam\
-$golang\
 $guix_shell\
 $haskell\
 $haxe\
@@ -54,13 +53,11 @@ $perl\
 $php\
 $pulumi\
 $purescript\
-$python\
 $quarto\
 $raku\
 $rlang\
 $red\
 $ruby\
-$rust\
 $scala\
 $solidity\
 $swift\
@@ -86,7 +83,6 @@ $mise\
 $crystal\
 $custom\
 $sudo\
-$cmd_duration\
 $line_break\
 $jobs\
 $battery\
@@ -99,52 +95,82 @@ $shell\
 $character
 """
 
+right_format = """\
+$cmd_duration\
+$golang\
+$rust\
+$python\
+"""
+
 [directory]
 fish_style_pwd_dir_length = 1
 format = "[$path]($style)[$read_only]($read_only_style) "
-style = "blue"
+style = "bright-blue"
 read_only = " 🔒"
 read_only_style = "red"
 
 [cmd_duration]
-format = "用時 [$duration]($style) "
-style = "yellow"
+format = "[ $duration]($style) "
+style = "dimmed"
 
 [line_break]
 disabled = true
 
 [character]
-success_symbol = "[\\$](green)"
-error_symbol = "[\\$](red)"
+success_symbol = "[\\$](bright-green)"
+error_symbol = "[\\$](bright-red)"
 
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "
 symbol = " "
-style = "green"
+style = "bright-green"
 
 [git_status]
 format = """\
 (\
 [$conflicted](red)\
-[$stashed](cyan)\
-[$deleted](red)\
-[$renamed](purple)\
+[$stashed](white)\
+[$deleted](bright-red)\
+[$renamed](bright-purple)\
 [$modified](yellow)\
-[$typechanged](yellow)\
-[$staged](yellow)\
+[$typechanged](bright-yellow)\
+[$staged](bright-yellow)\
 [$untracked](cyan)\
 [$ahead_behind](green)\
 )\
 """
 conflicted = "~${count} "
-ahead = ">${count} "
-diverged = ">${ahead_count} <${behind_count} "
-behind = "<${count} "
-up_to_date = ""
-untracked = "?${count} "
 stashed = "*${count} "
-modified = "!${count} "
-staged = "+${count} "
-renamed = "R${count} "
-typechanged = ""
 deleted = "X${count} "
+renamed = "R${count} "
+modified = "!${count} "
+typechanged = ""
+staged = "+${count} "
+untracked = "?${count} "
+ahead = ">${count} "
+behind = "<${count} "
+diverged = ">${ahead_count} <${behind_count} "
+up_to_date = ""
+
+[package]
+format = "[$symbol$version]($style) "
+disabled = true
+
+[python]
+format = "[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
+version_format = "${raw}"
+symbol = "󰌠  "
+style = "bold yellow"
+python_binary = [".venv/bin/python", "python", "python3", "python2"]
+
+[rust]
+format = "[$symbol($version )]($style)"
+version_format = "${raw}"
+symbol = "  "
+style = "bold purple"
+
+[golang]
+format = "[$symbol($version )]($style)"
+version_format = "${raw}"
+symbol = "󰟓  "
+style = "bold cyan"
