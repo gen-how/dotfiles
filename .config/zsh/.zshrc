@@ -1,6 +1,9 @@
 # Homebrew paths.
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 
+# Do not write a duplicate event to the history file.
+setopt HIST_SAVE_NO_DUPS
+
 # Setup custom command aliases.
 source $ZDOTDIR/alias.zsh
 
