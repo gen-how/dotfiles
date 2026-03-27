@@ -10,6 +10,9 @@ source $ZDOTDIR/alias.zsh
 # Setup completions.
 source $ZDOTDIR/completion.zsh
 
+# Setup key-bindings.
+source $ZDOTDIR/key-binding.zsh
+
 # Enable shell integration in VSCode integrated terminal.
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
