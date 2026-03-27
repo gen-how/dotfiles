@@ -1,5 +1,6 @@
 # Custom aliases.
 alias echopath="echo $PATH | tr ':' '\n'"
+alias echofpath="echo $FPATH | tr ':' '\n'"
 alias fzfp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias ls="lsd"
 alias ll="ls -l"
