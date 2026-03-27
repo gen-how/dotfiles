@@ -1,14 +1,11 @@
 # Homebrew paths.
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 
-# User custom command aliases.
-source $ZDOTDIR/aliases.sh
+# Setup custom command aliases.
+source $ZDOTDIR/alias.zsh
 
-# Initializes command tab-completion.
-autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
-
-source $ZDOTDIR/uv_run_mod.zsh
+# Setup completions.
+source $ZDOTDIR/completion.zsh
 
 # Enable shell integration in VSCode integrated terminal.
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
