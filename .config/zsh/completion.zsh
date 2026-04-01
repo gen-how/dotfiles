@@ -61,43 +61,59 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 if [ -x "$(command -v uv)" ]; then
     # Defines a patch function for `uv run ...` command.
     _uv_run_mod() {
-        # If "run" subcommand are typed and not started with "-" options.
-        if [[ "$words[2]" == "run" && "$words[CURRENT]" != -* ]]; then
-            local venv_binaries
-            if [[ -d .venv/bin ]]; then
-                venv_binaries=( ${(@f)"$(
-                    _call_program files ls -1 .venv/bin 2>/dev/null
-                )"} )
-                venv_binaries=( ${venv_binaries:#(activate|activate_this.py|activate.bat|activate.csh|activate.fish|activate.nu|activate.ps1|deactivate.bat)} )
+        # If "run" subcommand are typed.
+        if [[ "$words[2]" == "run" ]]; then
+
+            # Gets all arguments after "run".
+            local pre_args=( ${words[3,CURRENT-1]} )
+
+            # Filters out arguments starting with "-".
+            local targets=( ${pre_args:#-*} )
+
+            # If length of `targets` is 0 (entry point has not been typed), and the current input is not a flag.
+            if (( ${#targets} == 0 )) && [[ "$words[CURRENT]" != -* ]]; then
+
+                # Finds executable binaries in virtual environment.
+                local venv_binaries
+                if [[ -d .venv/bin ]]; then
+                    venv_binaries=( ${(@f)"$(
+                        _call_program files ls -1 .venv/bin 2>/dev/null
+                    )"} )
+                    venv_binaries=( ${venv_binaries:#(activate|activate_this.py|activate.bat|activate.csh|activate.fish|activate.nu|activate.ps1|deactivate.bat)} )
+                fi
+
+                # Finds user defined entry points.
+                local entry_points
+                if [[ -f pyproject.toml ]]; then
+                    entry_points=( ${(@f)"$(
+                        sed -n '/^\[project\.scripts\]/,/^\[/p' pyproject.toml |
+                        grep '=' |
+                        sed 's/\s*=.*//' |
+                        tr -d ' '
+                    )"} )
+                fi
+
+                # Finds python files in current working directory.
+                local py_files
+                py_files=( *.py(N) )
+
+                # Finds directories in current working directory.
+                local directories
+                directories=( *(/) )
+                directories=( ${directories:#(__pycache__|.git|.pytest_cache)} )
+
+                _alternative \
+                    "scripts:entry points:compadd -a entry_points" \
+                    "pyfiles:python files:compadd -a py_files" \
+                    "dirs:directories:compadd -a directories" \
+                    "binaries:venv binaries:compadd -a venv_binaries"
+                    # "files:filenames:_files" \
+                return
             fi
-
-            local entry_points
-            if [[ -f pyproject.toml ]]; then
-                entry_points=( ${(@f)"$(
-                    sed -n '/^\[project\.scripts\]/,/^\[/p' pyproject.toml |
-                    grep '=' |
-                    sed 's/\s*=.*//' |
-                    tr -d ' '
-                )"} )
-            fi
-
-            local py_files
-            py_files=( *.py(N) )
-
-            local directories
-            directories=( *(/) )
-            directories=( ${directories:#(__pycache__|.git|.pytest_cache)} )
-
-            _alternative \
-                "scripts:entry points:compadd -a entry_points" \
-                "pyfiles:python files:compadd -a py_files" \
-                "dirs:directories:compadd -a directories" \
-                "binaries:venv binaries:compadd -a venv_binaries"
-                # "files:filenames:_files" \
-        else
-            # Fallback to official one.
-            _uv "$@"
         fi
+
+        # Fallbacks to official uv completion.
+        _uv "$@"
     }
     compdef _uv_run_mod uv
 fi
