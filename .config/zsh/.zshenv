@@ -31,6 +31,9 @@ export _ZO_DATA_DIR="$XDG_DATA_HOME"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export LESSCHARSET=UTF-8
 
+# Set Python history filepath. (only works for Python 3.13+)
+export PYTHON_HISTORY="$XDG_CACHE_HOME/python_history"
+
 # Set Pip cache directory.
 export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
 
