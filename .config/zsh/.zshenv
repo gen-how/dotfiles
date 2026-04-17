@@ -23,7 +23,7 @@ FPATH="$ZDOTDIR/completion:${FPATH}"
 # Set Language if possible.
 export LANG=zh_TW.UTF-8
 
-# Set Z jump around environment variables.
+# Set "z" command environment variables.
 export _Z_DATA="$XDG_CACHE_HOME/z"
 export _ZO_DATA_DIR="$XDG_DATA_HOME"
 
@@ -40,12 +40,12 @@ export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
 # Set tensorflow.keras cache dir.
 export KERAS_HOME="$XDG_CACHE_HOME/keras"
 
-# Set npm environment variables.
+# Set NPM environment variables.
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
 
-# Set node.js environment variables.
+# Set Node.js environment variables.
 export NODE_REPL_HISTORY="$XDG_CACHE_HOME/node_repl_history"
 
 # Set Bun environment variables.
@@ -91,3 +91,6 @@ export FZF_DEFAULT_OPTS=" \
 # Set "albumentationsx" Python library environment variables to disable telemetry features.
 export ALBUMENTATIONS_NO_TELEMETRY=1
 export ALBUMENTATIONS_OFFLINE=1
+
+# Set Pi coding agent environment variables.
+export PI_CODING_AGENT_DIR="$XDG_CONFIG_HOME/pi/agent"
