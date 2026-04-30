@@ -1,0 +1,18 @@
+[user]
+	name = gen-how
+	email = 35521841+gen-how@users.noreply.github.com
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	editor = code --wait
+	quotepath = false
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
