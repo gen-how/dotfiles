@@ -20,7 +20,7 @@ FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
 # Set completion files path.
 FPATH="$ZDOTDIR/completion:${FPATH}"
 
-# Set Language if possible.
+# Set language.
 export LANG=zh_TW.UTF-8
 
 # Set "z" command environment variables.

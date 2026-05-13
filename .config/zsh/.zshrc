@@ -1,6 +1,9 @@
 # Homebrew paths.
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 
+# Set LS_COLORS with "vivid" command.
+export LS_COLORS="$(vivid generate ansi)"
+
 # Do not write a duplicate event to the history file.
 setopt HIST_SAVE_NO_DUPS
 
