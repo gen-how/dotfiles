@@ -1,4 +1,4 @@
-font-family = "Sarasa Mono TC"
+adjust-cell-width = -10%
 font-family = "Maple Mono NF CN"
 font-feature = -calt, cv01, cv61, cv99
 font-size = 20
