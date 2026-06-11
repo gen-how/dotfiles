@@ -106,8 +106,8 @@ if [ -x "$(command -v uv)" ]; then
                     "scripts:entry points:compadd -a entry_points" \
                     "pyfiles:python files:compadd -a py_files" \
                     "dirs:directories:compadd -a directories" \
-                    "binaries:venv binaries:compadd -a venv_binaries"
-                    # "files:filenames:_files" \
+                    "binaries:venv binaries:compadd -a venv_binaries" \
+                    "files:filenames:_files"
                 return
             fi
         fi
